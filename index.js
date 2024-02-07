@@ -1,6 +1,8 @@
 const { log } = require("console");
 
 const { division } = require('./division');
+
+const{multiplication} = require('./multiplication')
 let http = require("http");
 
 let port = +process.env.PORT || 5000;
@@ -13,7 +15,8 @@ http
         res.end(
             `<div style="background-color: #f0f0f0; padding: 20px; text-align: center; font-family: Arial, sans-serif;">
                 <h1 style="color: #333; font-family: Arial, sans-serif;">Jodie Smith made the frontend</h1>
-                <p style="font-family: Arial, sans-serif;"> division answer is: ${division(6, 4)}</p>
+                <p style="font-family: Arial, sans-serif;"> Division answer is: ${division(6, 4)}</p>
+                <p style="font-family: Arial, sans-serif;"> Multiplication answer is: ${multiplication(6, 4)}</p>
                 </div>`
         );
     })
